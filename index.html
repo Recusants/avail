@@ -1,0 +1,1936 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avail Technologies | Premium Business Software Solutions for Africa</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WBMRMHST0"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-5WBMRMHST0');
+    </script>
+    <style>
+        :root {
+            --primary-color: #1A2B47;
+            --secondary-color: #00A8A8;
+            --light-bg: #F5F7FA;
+            --white: #FFFFFF;
+            --black: #000000;
+            --gold: #D4AF37;
+            --gray: #6c757d;
+            --transition: all 0.3s ease;
+            
+            /* Dark mode variables */
+            --dark-primary: #121212;
+            --dark-secondary: #1E88E5;
+            --dark-text: #E0E0E0;
+            --dark-bg: #1E1E1E;
+            --dark-card: #2D2D2D;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            color: var(--black);
+            background-color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+        
+        /* Dark mode styles */
+        body.dark-mode {
+            background-color: var(--dark-bg);
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode h1,
+        body.dark-mode h2,
+        body.dark-mode h3,
+        body.dark-mode h4,
+        body.dark-mode h5,
+        body.dark-mode h6 {
+            color: var(--white);
+        }
+        
+        body.dark-mode .value-item,
+        body.dark-mode .product-card,
+        body.dark-mode .service-item,
+        body.dark-mode .team-member,
+        body.dark-mode .impact-item {
+            background-color: var(--dark-card);
+        }
+        
+        body.dark-mode .testimonial-item {
+            background-color: var(--dark-card);
+        }
+        
+        body.dark-mode .footer-links a,
+        body.dark-mode .contact-info span {
+            color: var(--dark-text);
+        }
+        
+        body.dark-mode .newsletter input {
+            background-color: var(--dark-card);
+            color: var(--dark-text);
+        }
+        
+        /* Dark mode toggle button */
+        .dark-mode-toggle {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            z-index: 999;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: var(--transition);
+        }
+        
+        .dark-mode-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        body.dark-mode .dark-mode-toggle {
+            background-color: var(--gold);
+            color: var(--primary-color);
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+            transition: color 0.3s ease;
+        }
+        
+        p {
+            margin-bottom: 1rem;
+            transition: color 0.3s ease;
+        }
+        
+        a {
+            text-decoration: none;
+            color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        a:hover {
+            color: var(--primary-color);
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        
+        .btn-primary {
+            background-color: var(--gold);
+            color: var(--white);
+            border: 2px solid var(--gold);
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--gold);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 2px solid var(--secondary-color);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+        
+        /* Header Styles */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            transition: var(--transition);
+        }
+        
+        body.dark-mode header {
+            background-color: var(--dark-card);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        body.dark-mode nav ul li a {
+            color: var(--dark-text);
+        }
+        
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+        
+        .logo {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 24px;
+            color: var(--primary-color);
+        }
+        
+        body.dark-mode .logo {
+            color: var(--white);
+        }
+        
+        .logo span {
+            color: var(--secondary-color);
+        }
+        
+        /* Navigation Styles */
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            position: relative;
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 16px;
+            padding: 5px 0;
+            position: relative;
+        }
+        
+        body.dark-mode nav ul li a {
+            color: var(--dark-text);
+        }
+        
+        nav ul li a:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            transition: var(--transition);
+        }
+        
+        nav ul li a:hover:after,
+        nav ul li.active a:after {
+            width: 100%;
+        }
+        
+        .dropdown {
+            position: relative;
+        }
+        
+        .dropdown > a::after {
+            content: '\f078';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            font-size: 12px;
+            margin-left: 5px;
+        }
+        
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: var(--white);
+            min-width: 200px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            z-index: 1;
+            border-radius: 4px;
+            padding: 10px 0;
+        }
+        
+        body.dark-mode .dropdown-content {
+            background-color: var(--dark-card);
+        }
+        
+        .dropdown-content a {
+            display: block;
+            padding: 10px 20px;
+            color: var(--primary-color);
+            font-weight: 400;
+        }
+        
+        body.dark-mode .dropdown-content a {
+            color: var(--dark-text);
+        }
+        
+        .dropdown-content a:hover {
+            background-color: var(--light-bg);
+        }
+        
+        body.dark-mode .dropdown-content a:hover {
+            background-color: rgba(255,255,255,0.1);
+        }
+        
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 24px;
+            color: var(--primary-color);
+            cursor: pointer;
+            margin-left: auto;
+            padding: 10px;
+        }
+        
+        body.dark-mode .mobile-menu-btn {
+            color: var(--dark-text);
+        }
+        
+        /* Mobile Navigation */
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav ul {
+                display: none;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-color: var(--white);
+                flex-direction: column;
+                padding: 80px 20px 20px;
+                z-index: 1000;
+                overflow-y: auto;
+                transform: translateX(100%);
+                transition: transform 0.3s ease;
+            }
+            
+            body.dark-mode nav ul {
+                background-color: var(--dark-card);
+            }
+            
+            nav ul.show {
+                display: flex;
+                transform: translateX(0);
+            }
+            
+            nav ul li {
+                margin: 0;
+                padding: 10px 0;
+                border-bottom: 1px solid #eee;
+            }
+            
+            body.dark-mode nav ul li {
+                border-bottom-color: #444;
+            }
+            
+            nav ul li a {
+                display: block;
+                padding: 10px;
+                font-size: 18px;
+            }
+            
+            .dropdown > a::after {
+                content: '\f078';
+                float: right;
+                transition: transform 0.3s ease;
+            }
+            
+            .dropdown.active > a::after {
+                transform: rotate(180deg);
+            }
+            
+            .dropdown-content {
+                position: static;
+                box-shadow: none;
+                display: none;
+                background-color: var(--light-bg);
+                padding: 0 0 0 20px;
+                width: 100%;
+            }
+            
+            body.dark-mode .dropdown-content {
+                background-color: rgba(0,0,0,0.1);
+            }
+            
+            .dropdown.active .dropdown-content {
+                display: block;
+            }
+            
+            .dropdown-content a {
+                padding: 10px;
+                font-size: 16px;
+            }
+            
+            /* Close button for mobile menu */
+            .mobile-menu-close {
+                position: absolute;
+                top: 20px;
+                right: 20px;
+                background: none;
+                border: none;
+                font-size: 24px;
+                color: var(--primary-color);
+                cursor: pointer;
+            }
+            
+            body.dark-mode .mobile-menu-close {
+                color: var(--dark-text);
+            }
+        }
+        
+        /* Hero Section */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(rgba(26, 43, 71, 0.8), rgba(26, 43, 71, 0.8)), url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2071&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 20px;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1.5rem;
+            color: var(--white);
+            line-height: 1.2;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            animation: fadeInUp 1s ease 0.2s;
+            animation-fill-mode: both;
+        }
+        
+        .hero .btn {
+            animation: fadeInUp 1s ease 0.4s;
+            animation-fill-mode: both;
+        }
+        
+        /* About Section */
+        .section {
+            padding: 100px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        
+        .section-title h2 {
+            font-size: 2.5rem;
+            display: inline-block;
+        }
+        
+        .section-title h2:after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background-color: var(--secondary-color);
+            margin: 15px auto 0;
+        }
+        
+        .about-content {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .about-text {
+            flex: 1;
+            min-width: 300px;
+            padding-right: 30px;
+        }
+        
+        .about-image {
+            flex: 1;
+            min-width: 300px;
+            position: relative;
+        }
+        
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .core-values {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 30px;
+            justify-content: space-between;
+        }
+        
+        .value-item {
+            flex-basis: calc(33.333% - 20px);
+            margin-bottom: 30px;
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            text-align: center;
+        }
+        
+        .value-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .value-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+        
+        /* Products Section */
+        .products {
+            background-color: var(--light-bg);
+        }
+        
+        body.dark-mode .products {
+            background-color: var(--dark-bg);
+        }
+        
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .product-card {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .product-image {
+            height: 200px;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .product-image i {
+            font-size: 4rem;
+            color: var(--white);
+        }
+        
+        .product-content {
+            padding: 30px;
+        }
+        
+        .product-content h3 {
+            margin-bottom: 15px;
+        }
+        
+        .product-content p {
+            margin-bottom: 20px;
+            color: var(--gray);
+        }
+        
+        /* Services Section */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-item {
+            background-color: var(--white);
+            padding: 40px 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .service-item:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 0;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+            z-index: -1;
+        }
+        
+        .service-item:hover:before {
+            height: 100%;
+        }
+        
+        .service-item:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-item:hover h3,
+        .service-item:hover p {
+            color: var(--white);
+        }
+        
+        .service-item:hover .service-icon {
+            color: var(--gold);
+        }
+        
+        .service-icon {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            transition: var(--transition);
+        }
+        
+        /* Clients Section */
+        .clients {
+            background-color: var(--light-bg);
+            padding: 80px 0;
+        }
+        
+        body.dark-mode .clients {
+            background-color: var(--dark-bg);
+        }
+        
+        .clients-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .clients-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .clients-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        body.dark-mode .clients-title h2 {
+            color: var(--white);
+        }
+        
+        .clients-title p {
+            color: var(--gray);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .clients-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+            gap: 40px;
+            align-items: center;
+            justify-items: center;
+        }
+        
+        .client-logo {
+            max-width: 100%;
+            height: auto;
+            filter: grayscale(100%);
+            opacity: 0.7;
+            transition: var(--transition);
+        }
+        
+        .client-logo:hover {
+            filter: grayscale(0);
+            opacity: 1;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            background-color: var(--light-bg);
+            position: relative;
+        }
+        
+        body.dark-mode .testimonials {
+            background-color: var(--dark-bg);
+        }
+        
+        .testimonial-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .testimonial-item {
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 30px;
+            position: relative;
+            padding-left: 40px;
+        }
+        
+        .testimonial-text:before {
+            content: '\201C';
+            font-family: 'Playfair Display', serif;
+            font-size: 4rem;
+            position: absolute;
+            left: 0;
+            top: -20px;
+            color: var(--secondary-color);
+            opacity: 0.3;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-image {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            margin-right: 20px;
+        }
+        
+        .author-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Impact Section */
+        .impact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 30px;
+        }
+        
+        .impact-item {
+            flex-basis: calc(50% - 15px);
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .impact-image {
+            height: 250px;
+            overflow: hidden;
+        }
+        
+        .impact-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .impact-item:hover .impact-image img {
+            transform: scale(1.1);
+        }
+        
+        .impact-content {
+            padding: 30px;
+        }
+        
+        /* Team Section */
+        .team {
+            background-color: var(--light-bg);
+        }
+        
+        body.dark-mode .team {
+            background-color: var(--dark-bg);
+        }
+        
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 30px;
+        }
+        
+        .team-member {
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: var(--transition);
+        }
+        
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .member-image {
+            height: 300px;
+            overflow: hidden;
+        }
+        
+        .member-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .member-info {
+            padding: 20px;
+            text-align: center;
+        }
+        
+        .member-info h3 {
+            margin-bottom: 5px;
+        }
+        
+        .member-info p {
+            color: var(--gray);
+            margin-bottom: 15px;
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--light-bg);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 5px;
+            transition: var(--transition);
+        }
+        
+        body.dark-mode .social-links a {
+            background-color: var(--dark-card);
+            color: var(--dark-text);
+        }
+        
+        .social-links a:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+        }
+        
+        /* Contact Section */
+        .contact-section {
+            padding: 80px 0;
+            background-color: var(--light-bg);
+        }
+        
+        body.dark-mode .contact-section {
+            background-color: var(--dark-bg);
+        }
+        
+        .contact-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        .contact-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+        
+        .contact-title h2 {
+            font-size: 2.5rem;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        
+        body.dark-mode .contact-title h2 {
+            color: var(--white);
+        }
+        
+        .contact-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+        }
+        
+        .contact-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        .contact-info h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        body.dark-mode .contact-info h3 {
+            color: var(--white);
+        }
+        
+        .contact-details {
+            list-style: none;
+        }
+        
+        .contact-details li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .contact-icon {
+            margin-right: 15px;
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+            margin-top: 5px;
+        }
+        
+        .contact-text h4 {
+            margin-bottom: 5px;
+            color: var(--primary-color);
+        }
+        
+        body.dark-mode .contact-text h4 {
+            color: var(--white);
+        }
+        
+        .contact-text p, 
+        .contact-text a {
+            color: var(--gray);
+        }
+        
+        .social-media {
+            margin-top: 30px;
+        }
+        
+        .social-media h4 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        body.dark-mode .social-media h4 {
+            color: var(--white);
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-icon {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            background-color: var(--white);
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.2rem;
+            transition: var(--transition);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+        
+        body.dark-mode .social-icon {
+            background-color: var(--dark-card);
+            color: var(--dark-text);
+            box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+        }
+        
+        .social-icon:hover {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            transform: translateY(-3px);
+        }
+        
+        .contact-form {
+            flex: 1;
+            min-width: 300px;
+            background-color: var(--white);
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        body.dark-mode .contact-form {
+            background-color: var(--dark-card);
+        }
+        
+        .contact-form h3 {
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+        
+        body.dark-mode .contact-form h3 {
+            color: var(--white);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        body.dark-mode .form-group label {
+            color: var(--dark-text);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Open Sans', sans-serif;
+            transition: var(--transition);
+        }
+        
+        body.dark-mode .form-group input,
+        body.dark-mode .form-group textarea {
+            background-color: var(--dark-bg);
+            border-color: #444;
+            color: var(--dark-text);
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        .submit-btn {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+        }
+        
+        .submit-btn:hover {
+            background-color: var(--primary-color);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background: linear-gradient(rgba(26, 43, 71, 0.9), rgba(26, 43, 71, 0.9)), url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') center/cover no-repeat;
+            color: var(--white);
+            text-align: center;
+            padding: 80px 0;
+        }
+        
+        .cta h2 {
+            color: var(--white);
+            margin-bottom: 20px;
+        }
+        
+        .cta p {
+            max-width: 700px;
+            margin: 0 auto 30px;
+            font-size: 1.1rem;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 80px 0 20px;
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+        
+        .footer-column h3 {
+            color: var(--white);
+            margin-bottom: 25px;
+            position: relative;
+            padding-bottom: 10px;
+        }
+        
+        .footer-column h3:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--secondary-color);
+        }
+        
+        .footer-links {
+            list-style: none;
+        }
+        
+        .footer-links li {
+            margin-bottom: 15px;
+        }
+        
+        .footer-links a {
+            color: #b4b4b4;
+            transition: var(--transition);
+        }
+        
+        .footer-links a:hover {
+            color: var(--white);
+            padding-left: 5px;
+        }
+        
+        .contact-info {
+            list-style: none;
+        }
+        
+        .contact-info li {
+            display: flex;
+            margin-bottom: 15px;
+        }
+        
+        .contact-info i {
+            color: var(--secondary-color);
+            margin-right: 15px;
+            margin-top: 5px;
+        }
+        
+        .newsletter form {
+            display: flex;
+            margin-top: 20px;
+        }
+        
+        .newsletter input {
+            flex: 1;
+            padding: 12px 15px;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        body.dark-mode .newsletter input {
+            background-color: var(--dark-card);
+            color: var(--dark-text);
+        }
+        
+        .newsletter button {
+            background-color: var(--secondary-color);
+            color: var(--white);
+            border: none;
+            padding: 0 20px;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+        
+        .newsletter button:hover {
+            background-color: var(--gold);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-bottom p {
+            margin-bottom: 0;
+            font-size: 0.9rem;
+            color: #b4b4b4;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive Styles */
+        @media (max-width: 992px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+            
+            .value-item {
+                flex-basis: calc(50% - 15px);
+            }
+            
+            .services-grid {
+                grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            }
+            
+            .impact-item {
+                flex-basis: 100%;
+            }
+            
+            .clients-grid {
+                grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+                gap: 30px;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+            
+            .about-content {
+                flex-direction: column;
+            }
+            
+            .about-text {
+                padding-right: 0;
+                margin-bottom: 30px;
+            }
+            
+            .value-item {
+                flex-basis: 100%;
+            }
+            
+            .section {
+                padding: 70px 0;
+            }
+            
+            .contact-content {
+                flex-direction: column;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+            
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .testimonial-item {
+                padding: 30px 20px;
+            }
+            
+            .clients-grid {
+                grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container header-container">
+            <a href="/" class="logo">
+                <img src="img/logo2025.png" alt="Avail Technologies" style="height: 75px;">
+            </a>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <nav>
+                <button class="mobile-menu-close" id="mobileMenuClose" style="display: none;">
+                    <i class="fas fa-times"></i>
+                </button>
+                <ul id="mainMenu">
+                    <li class="active"><a href="/">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <!-- <li class="dropdown">
+                        <a href="#products">Products <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#">Clarity Clinics</a>
+                            <a href="#">Clarity Pharmacy</a>
+                            <a href="#">Clarity Retail</a>
+                            <a href="#">Clarity Scholars</a>
+                        </div>
+                    </li> 
+                    <li class="dropdown">
+                        <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="#">Custom Software Development</a>
+                            <a href="#">Software Engineering Consultancy</a>
+                            <a href="#">Cyber Security Consultancy</a>
+                            <a href="#">Data Processing & Analysis</a>
+                            <a href="#">Network Services</a>
+                            <a href="#">Website Development</a>
+                        </div>
+                    </li> -->
+                    <li><a href="#impact">Culture</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Empowering African Businesses Through Technology</h1>
+            <p>Your trusted partner in premium software solutions for sustainable growth</p>
+            <a href="#" class="btn btn-primary">Discover Our Solutions</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section" id="about">
+        <div class="container">
+            <div class="section-title">
+                <h2>About Us</h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>At Avail Technologies, we empower African businesses to thrive through innovative technology solutions. Founded in August 2023, we offer a range of solutions, from customized software development to off-the-shelf products, designed to meet the unique needs of our clients.</p>
+                    <p>Our vision is to become the top technology concierge for discerning African businesses, providing bespoke innovations and excellent solutions that enable our valued clients to reach their full potential, create sustainable growth, and exceed their lofty goals.</p>
+                    <a href="#" class="btn btn-secondary">Learn More About Us</a>
+                </div>
+                <div class="about-image">
+                    <img src="img/team.jpg" alt="Avail Technologies Team">
+                </div>
+            </div>
+            <div class="core-values">
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Innovation</h3>
+                    <p>We believe that innovation is the key to unlocking business potential. We encourage experimentation, learning, and creativity.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Simplicity & Usability</h3>
+                    <p>We are committed to making technology accessible, intuitive, and effortless to use through automation and user-friendly design.</p>
+                </div>
+                <div class="value-item">
+                    <div class="value-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Efficiency & Effectiveness</h3>
+                    <p>We are dedicated to empowering businesses to achieve exceptional outcomes through intelligent, purpose-driven solutions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="section products" id="products">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Premium Software Solutions</h2>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-hospital-user"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Clarity Clinics</h3>
+                        <p>Elevate your healthcare practice with our advanced clinic management software designed to streamline operations and enhance patient care.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-prescription-bottle-alt"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Clarity Pharmacy</h3>
+                        <p>Transform your pharmacy operations with our advanced management software designed to streamline workflows and enhance patient care.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-cash-register"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Clarity Retail</h3>
+                        <p>Streamline your retail operations with our state-of-the-art Point-of-Sale software designed for efficiency and growth.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="product-content">
+                        <h3>Clarity Scholars</h3>
+                        <p>Comprehensive school management software designed to streamline operations, enhance communication, and improve educational experiences.</p>
+                        <a href="#" class="btn btn-secondary">Learn More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section" id="services">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Services</h2>
+            </div>
+            <div class="services-grid">
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Custom Software Development</h3>
+                    <p>Empower your business with tailor-made software solutions designed to meet your unique operational needs.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3>Software Engineering Consultancy</h3>
+                    <p>Leverage our expertise to transform your ideas into robust, scalable, and future-proof software solutions.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Cyber Security Consultancy</h3>
+                    <p>Protect your business from evolving threats with our comprehensive cybersecurity services.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-chart-pie"></i>
+                    </div>
+                    <h3>Data Processing & Analysis</h3>
+                    <p>Unlock the power of your data with our advanced processing and analysis services.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-network-wired"></i>
+                    </div>
+                    <h3>Network Installation & Maintenance</h3>
+                    <p>Ensure seamless connectivity and operational efficiency with our comprehensive network services.</p>
+                </div>
+                <div class="service-item">
+                    <div class="service-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Website Development</h3>
+                    <p>Elevate your online presence with our professional website development and maintenance services.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <!-- <section class="section clients" id="clients">
+        <div class="clients-container">
+            <div class="clients-title">
+                <h2>Our Valued Clients & Partners</h2>
+                <p>We're proud to collaborate with industry leaders and innovative businesses across Africa</p>
+            </div>
+            <div class="clients-grid">
+                <img src="img/clients_logos/benjimed.PNG" alt="Client Logo" class="client-logo">
+                <img src="img/clients_logos/mugnum.PNG" alt="Client Logo" class="client-logo">
+                <img src="img/clients_logos/tajo.JPG" alt="Client Logo" class="client-logo">
+                <img src="img/clients_logos/middig.JPG" alt="Client Logo" class="client-logo">
+                <img src="img/clients_logos/msc.PNG" alt="Client Logo" class="client-logo">
+                <img src="img/clients_logos/vfc.JPG" alt="Client Logo" class="client-logo">
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Testimonials Section -->
+   <!--  <section class="section testimonials">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Our Clients Say</h2>
+            </div>
+            <div class="testimonial-container">
+                <div class="testimonial-item">
+                    <div class="testimonial-text">
+                        Avail Technologies transformed our clinic operations with their Clarity Clinics software. The system is intuitive, efficient, and has significantly improved our patient care process. Their team was professional and responsive throughout the implementation.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-image">
+                            <img src="img/no_gender_avatar.PNG" alt="Dr. Sarah Moyo">
+                        </div>
+                        <div class="author-info">
+                            <h4>Dr. Sarah Moyo</h4>
+                            <p>Director, Healing Hands Clinic</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+
+    <!-- Impact Section -->
+    <section class="section" id="impact">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Community Impact</h2>
+            </div>
+            <div class="impact-container">
+                <div class="impact-item">
+                    <div class="impact-image">
+                        <img src="img/middig.jpg" alt="MIDDIG Support">
+                    </div>
+                    <div class="impact-content">
+                        <h3>Supporting MIDDIG</h3>
+                        <p>We support the Midlands Diabetes Interest Group by developing and maintaining specialized record-keeping software, enabling them to focus on improving diabetes care.</p>
+                    </div>
+                </div>
+                <div class="impact-item">
+                    <div class="impact-image">
+                        <img src="img/api.jpg" alt="Agriculture API">
+                    </div>
+                    <div class="impact-content">
+                        <h3>Free Agriculture APIs</h3>
+                        <p>Our Free Livestock Health API provides real-time data to enhance livestock management, improve health outcomes, and boost productivity for farmers across Zimbabwe.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="section team">
+        <div class="container">
+            <div class="section-title">
+                <h2>Our Leadership Team</h2>
+            </div>
+            <div class="team-grid">
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/tinashe_mphisa.jpg" alt="Tinashe Mphisa">
+                    </div>
+                    <div class="member-info">
+                        <h3>Tinashe Mphisa</h3>
+                        <p>CEO & Founder</p>
+                        <div class="social-links">
+                            <a href="https://www.linkedin.com/in/tinashe-mphisa-884546210/"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="https://x.com/mphisa_tinashe"><i class="fab fa-twitter"></i></a>
+                            <a href="mailto:tmphisa:info@avail.co.zw"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/merktilder_mutombo.jpg" alt="Mektildah Mutombo">
+                    </div>
+                    <div class="member-info">
+                        <h3>Mektildah Mutombo</h3>
+                        <p>Chief Technology Officer</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/lucion_mundangwa.jpg" alt="Lucion Mundangwa">
+                    </div>
+                    <div class="member-info">
+                        <h3>Lucion Mundangwa</h3>
+                        <p>Marketing Director & Founder</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="team-member">
+                    <div class="member-image">
+                        <img src="img/consider_wachi.jpg" alt="Consider Wachi">
+                    </div>
+                    <div class="member-info">
+                        <h3>Consider Wachi</h3>
+                        <p>Brand Manager</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="section contact-section" id="contact">
+        <div class="contact-container">
+            <div class="contact-title">
+                <h2>Get In Touch</h2>
+                <p>Have questions or want to discuss your project? We'd love to hear from you.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <ul class="contact-details">
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Our Office</h4>
+                                <p>Ruvimbo Park, Marondera, Zimbabwe</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p><a href="tel:+263786106154">+263 78 610 6154</a></p>
+                                <p><a href="tel:+263784851863">+263 78 485 1863</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p><a href="mailto:info@avail.co.zw">info@avail.co.zw</a></p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="social-media">
+                        <h4>Follow Us</h4>
+                        <div class="social-icons">
+                            <a href="https://wa.me/263786106154?text=Hello%20Avail%20Technologies" target="_blank" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+                            <a href="https://www.facebook.com/profile.php?id=100095092221990" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/Availtechinfo" class="social-icon"><i class="fab fa-twitter"></i></a>
+                            <a href="https://www.linkedin.com/company/97882484" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                            <!-- <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a> -->
+                            <!-- <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+ -->                        </div>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <h3>Send Us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="cta">
+        <div class="container">
+            <h2>Ready to Transform Your Business?</h2>
+            <p>Let's work together to create innovative solutions that drive growth, efficiency, and success for your business.</p>
+            <a href="#" class="btn btn-primary">Contact Us Today</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-column">
+                    <h3>About Avail</h3>
+                    <p>We empower African businesses to thrive through innovative technology solutions, from customized software development to off-the-shelf products.</p>
+                </div>
+                <div class="footer-column">
+                    <h3>Products</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Clarity Clinics</a></li>
+                        <li><a href="#">Clarity Pharmacy</a></li>
+                        <li><a href="#">Clarity Retail</a></li>
+                        <li><a href="#">Clarity Scholars</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">Custom Software Development</a></li>
+                        <li><a href="#">Software Engineering Consultancy</a></li>
+                        <li><a href="#">Cyber Security Consultancy</a></li>
+                        <li><a href="#">Data Processing & Analysis</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Contact Us</h3>
+                    <ul class="contact-info">
+                        <li>
+                            <i class="fas fa-phone"></i>
+                            <span>+263 78 610 6154 / +263 78 485 1863</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@avail.co.zw</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-globe"></i>
+                            <span>avail.co.zw</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Newsletter</h3>
+                    <p>Subscribe to our newsletter for the latest updates and insights.</p>
+                    <div class="newsletter">
+                        <form>
+                            <input type="email" placeholder="Your Email">
+                            <button type="submit"><i class="fas fa-paper-plane"></i></button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Avail Technologies. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dark Mode Toggle -->
+    <div class="dark-mode-toggle" id="darkModeToggle">
+        <i class="fas fa-moon"></i>
+    </div>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+        const mobileMenuClose = document.getElementById('mobileMenuClose');
+        const mainMenu = document.getElementById('mainMenu');
+        
+        mobileMenuBtn.addEventListener('click', function() {
+            mainMenu.classList.add('show');
+            mobileMenuClose.style.display = 'block';
+            mobileMenuBtn.style.display = 'none';
+            document.body.style.overflow = 'hidden';
+        });
+        
+        mobileMenuClose.addEventListener('click', function() {
+            mainMenu.classList.remove('show');
+            mobileMenuClose.style.display = 'none';
+            mobileMenuBtn.style.display = 'block';
+            document.body.style.overflow = '';
+        });
+        
+        // Close mobile menu when clicking a link
+        document.querySelectorAll('#mainMenu a').forEach(link => {
+            link.addEventListener('click', function() {
+                if (window.innerWidth <= 768) {
+                    mainMenu.classList.remove('show');
+                    mobileMenuClose.style.display = 'none';
+                    mobileMenuBtn.style.display = 'block';
+                    document.body.style.overflow = '';
+                }
+            });
+        });
+        
+        // Dropdown Toggle for Mobile
+        document.querySelectorAll('.dropdown > a').forEach(dropdown => {
+            dropdown.addEventListener('click', function(e) {
+                if (window.innerWidth <= 768) {
+                    e.preventDefault();
+                    const dropdownContent = this.nextElementSibling;
+                    const isActive = this.parentElement.classList.contains('active');
+                    
+                    // Close all other dropdowns
+                    document.querySelectorAll('.dropdown').forEach(d => {
+                        if (d !== this.parentElement) {
+                            d.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
+                    if (!isActive) {
+                        this.parentElement.classList.add('active');
+                    } else {
+                        this.parentElement.classList.remove('active');
+                    }
+                }
+            });
+        });
+        
+        // Dark Mode Toggle
+        const darkModeToggle = document.getElementById('darkModeToggle');
+        const body = document.body;
+        const darkModeIcon = darkModeToggle.querySelector('i');
+        
+        // Check for saved user preference
+        const currentTheme = localStorage.getItem('theme');
+        if (currentTheme === 'dark') {
+            body.classList.add('dark-mode');
+            darkModeIcon.classList.remove('fa-moon');
+            darkModeIcon.classList.add('fa-sun');
+        }
+        
+        darkModeToggle.addEventListener('click', () => {
+            body.classList.toggle('dark-mode');
+            
+            if (body.classList.contains('dark-mode')) {
+                localStorage.setItem('theme', 'dark');
+                darkModeIcon.classList.remove('fa-moon');
+                darkModeIcon.classList.add('fa-sun');
+            } else {
+                localStorage.setItem('theme', 'light');
+                darkModeIcon.classList.remove('fa-sun');
+                darkModeIcon.classList.add('fa-moon');
+            }
+        });
+        
+        // Sticky Header
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.style.padding = '5px 0';
+                header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+                header.style.boxShadow = '0 2px 20px rgba(0, 0, 0, 0.1)';
+            } else {
+                header.style.padding = '';
+                header.style.backgroundColor = '';
+                header.style.boxShadow = '';
+            }
+        });
+        
+        // Scroll Animation
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.value-item, .product-card, .service-item, .team-member, .impact-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.2;
+                
+                if (elementPosition < screenPosition) {
+                    element.style.opacity = '1';
+                    element.style.transform = 'translateY(0)';
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Initialize animations on load
+        window.addEventListener('load', function() {
+            document.querySelectorAll('.value-item, .product-card, .service-item, .team-member, .impact-item').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+            });
+            
+            animateOnScroll();
+        });
+    </script>
+</body>
+</html>
