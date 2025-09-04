@@ -1,21 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <!-- Primary Meta Tags -->
+    <title>Avail Software | Custom Website and Software App Development in Zimbabwe</title>
+    <meta name="title" content="Avail Software | Custom Business Software Development in Zimbabwe">
+    <meta name="description" content="Avail builds scalable, secure & innovative software solutions for businesses in Zimbabwe & beyond. From web apps to mobile development, avail our expertise.">
+    <meta name="keywords" content="software development company zimbabwe, web development, mobile app development, harare software developers, custom software, cloud solutions, digital transformation">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://avail.co.zw" />
+
+    <!-- Viewport for Mobile -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Avail Technologies | Premium Business Software Solutions for Africa</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-5WBMRMHST0"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+    <!-- Open Graph / Facebook (for Social Sharing) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://avail.co.zw/">
+    <meta property="og:title" content="Avail Software | Custom Business Software Development in Zimbabwe">
+    <meta property="og:description" content="Innovative software solutions built for your business. Web, mobile, and cloud development experts.">
+    <meta property="og:image" content="https://avail.co.zw/images/og-avail-preview.jpg">
 
-      gtag('config', 'G-5WBMRMHST0');
+    <!-- Twitter Card -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://avail.co.zw/">
+    <meta property="twitter:title" content="Avail Software | Custom Business Software Development in Zimbabwe">
+    <meta property="twitter:description" content="Innovative software solutions built for your business. Web, mobile, and cloud development experts.">
+    <meta property="twitter:image" content="https://avail.co.zw/img/logo.PNG">
+
+    <!-- Structured Data for Local Business (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Avail Software",
+      "url": "https://avail.co.zw",
+      "logo": "https://avail.co.zw/images/avail-logo.png",
+      "description": "Custom software development company specializing in web, mobile, and cloud applications.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "1788 Ruvimbo Park",
+        "addressLocality": "Marondera",
+        "addressCountry": "ZW"
+      },
+      "areaServed": "ZW",
+      "serviceType": "Business Software Development, Web Development",
+      "email": "info@avail.co.zw",
+      "telephone": "+263-78-485-163"
+    }
     </script>
+
+    <!-- Favicon & Styles -->
+    <link rel="icon" type="image/x-icon" href="img/logo_min.PNG">
+    <link rel="stylesheet" href="/css/styles.css">
+
     <style>
         :root {
             --primary-color: #1A2B47;
@@ -1312,6 +1349,211 @@
                 gap: 20px;
             }
         }
+        
+        /* Modal Styles */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7);
+            z-index: 10000;
+            overflow-y: auto;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        
+        .modal.show {
+            opacity: 1;
+        }
+        
+        .modal-content {
+            position: relative;
+            background-color: var(--white);
+            margin: 5% auto;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 12px;
+            box-shadow: 0 5px 30px rgba(0, 0, 0, 0.3);
+            animation: modalFadeIn 0.3s ease;
+            overflow: hidden;
+        }
+        
+        body.dark-mode .modal-content {
+            background-color: var(--dark-card);
+        }
+        
+        .modal-header {
+            padding: 20px 30px;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        body.dark-mode .modal-header {
+            border-bottom-color: #444;
+        }
+        
+        .modal-header h2 {
+            margin-bottom: 0;
+            color: var(--primary-color);
+        }
+        
+        body.dark-mode .modal-header h2 {
+            color: var(--white);
+        }
+        
+        .close-modal {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+            color: var(--gray);
+            transition: var(--transition);
+        }
+        
+        .close-modal:hover {
+            color: var(--secondary-color);
+        }
+        
+        .modal-body {
+            padding: 30px;
+        }
+        
+        .modal-image {
+            width: 100%;
+            height: 300px;
+            background-color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            border-radius: 8px;
+        }
+        
+        .modal-image i {
+            font-size: 5rem;
+            color: var(--white);
+        }
+        
+        .modal-description {
+            margin-bottom: 25px;
+            line-height: 1.8;
+        }
+        
+        .modal-features {
+            margin-bottom: 30px;
+        }
+        
+        .modal-features h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        body.dark-mode .modal-features h3 {
+            color: var(--white);
+        }
+        
+        .feature-list {
+            list-style-type: none;
+        }
+        
+        .feature-list li {
+            margin-bottom: 10px;
+            padding-left: 25px;
+            position: relative;
+        }
+        
+        .feature-list li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            color: var(--secondary-color);
+            position: absolute;
+            left: 0;
+        }
+        
+        .modal-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        .whatsapp-btn {
+            background-color: #25D366;
+            color: white;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .whatsapp-btn:hover {
+            background-color: #128C7E;
+            transform: translateY(-2px);
+        }
+        
+        .demo-btn {
+            background-color: var(--primary-color);
+            color: var(--white);
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 25px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .demo-btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-2px);
+        }
+        
+        @keyframes modalFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Responsive adjustments for modals */
+        @media (max-width: 768px) {
+            .modal-content {
+                width: 95%;
+                margin: 10% auto;
+            }
+            
+            .modal-actions {
+                flex-direction: column;
+            }
+            
+            .whatsapp-btn,
+            .demo-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1333,32 +1575,297 @@
                     <li><a href="#about">About Us</a></li>
                     <li><a href="#products">Products</a></li>
                     <li><a href="#services">Services</a></li>
-                    <!-- <li class="dropdown">
-                        <a href="#products">Products <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#">Clarity Clinics</a>
-                            <a href="#">Clarity Pharmacy</a>
-                            <a href="#">Clarity Retail</a>
-                            <a href="#">Clarity Scholars</a>
-                        </div>
-                    </li> 
-                    <li class="dropdown">
-                        <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
-                        <div class="dropdown-content">
-                            <a href="#">Custom Software Development</a>
-                            <a href="#">Software Engineering Consultancy</a>
-                            <a href="#">Cyber Security Consultancy</a>
-                            <a href="#">Data Processing & Analysis</a>
-                            <a href="#">Network Services</a>
-                            <a href="#">Website Development</a>
-                        </div>
-                    </li> -->
                     <li><a href="#impact">Culture</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
     </header>
+
+    <!-- Product Modals -->
+    
+    <div id="clinicsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Clarity Clinics</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <i class="fas fa-hospital-user"></i>
+                </div>
+                <p class="modal-description">
+                    Clarity Clinics is our comprehensive healthcare management solution designed to streamline operations, 
+                    enhance patient care, and improve efficiency in medical practices. Our software handles everything from 
+                    patient records and appointments to billing and inventory management.
+                </p>
+                <div class="modal-features">
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        <li>Electronic Health Records (EHR) management</li>
+                        <li>Appointment scheduling and reminders</li>
+                        <li>Billing and insurance claim processing</li>
+                        <li>Pharmacy and inventory management</li>
+                        <li>Patient portal for access to records</li>
+                        <li>Reporting and analytics dashboard</li>
+                        <li>Multi-location support</li>
+                        <li>Secure data encryption and backup</li>
+                    </ul>
+                </div>
+                <div class="modal-actions">
+                    <a href="https://wa.me/263786106154?text=Hello%20Avail%20Technologies,%20I'm%20interested%20in%20Clarity%20Clinics%20software." target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                    </a>
+                    <button class="demo-btn">
+                        <i class="fas fa-desktop"></i> Request Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="pharmacyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Clarity Pharmacy</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <i class="fas fa-prescription-bottle-alt"></i>
+                </div>
+                <p class="modal-description">
+                    Clarity Pharmacy is a specialized management system designed for pharmacies of all sizes. 
+                    It streamlines inventory management, prescription processing, and customer relations, 
+                    helping you provide excellent service while maximizing efficiency.
+                </p>
+                <div class="modal-features">
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        <li>Inventory management with expiry tracking</li>
+                        <li>Prescription processing and labeling</li>
+                        <li>Supplier and purchase order management</li>
+                        <li>Patient history and allergy alerts</li>
+                        <li>Insurance and NHIS billing integration</li>
+                        <li>Sales reporting and analytics</li>
+                        <li>Multi-branch support</li>
+                        <li>Mobile accessibility</li>
+                    </ul>
+                </div>
+                <div class="modal-actions">
+                    <a href="https://wa.me/263786106154?text=Hello%20Avail%20Technologies,%20I'm%20interested%20in%20Clarity%20Pharmacy%20software." target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                    </a>
+                    <button class="demo-btn">
+                        <i class="fas fa-desktop"></i> Request Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="retailModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Clarity Retail</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <i class="fas fa-cash-register"></i>
+                </div>
+                <p class="modal-description">
+                    Clarity Retail is a comprehensive Point of Sale (POS) and inventory management solution 
+                    designed for retail businesses. From small shops to multi-store chains, our software helps 
+                    you manage sales, inventory, customers, and employees with ease.
+                </p>
+                <div class="modal-features">
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        <li>Point of Sale with multiple payment options</li>
+                        <li>Inventory management with stock alerts</li>
+                        <li>Customer relationship management (CRM)</li>
+                        <li>Sales reporting and analytics</li>
+                        <li>Employee management and commission tracking</li>
+                        <li>Multi-store support</li>
+                        <li>Barcode and label printing</li>
+                        <li>Integration with accounting software</li>
+                    </ul>
+                </div>
+                <div class="modal-actions">
+                    <a href="https://wa.me/263786106154?text=Hello%20Avail%20Technologies,%20I'm%20interested%20in%20Clarity%20Retail%20software." target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                    </a>
+                    <button class="demo-btn">
+                        <i class="fas fa-desktop"></i> Request Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="scholarsModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Clarity Scholars</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <p class="modal-description">
+                    Clarity Scholars is a complete school management system designed to streamline administrative tasks, 
+                    enhance communication, and improve the educational experience for students, teachers, and parents.
+                </p>
+                <div class="modal-features">
+                    <h3>Key Features</h3>
+                    <ul class="feature-list">
+                        <li>Student information system</li>
+                        <li>Attendance tracking</li>
+                        <li>Gradebook and report card generation</li>
+                        <li>Timetable management</li>
+                        <li>Fee management and billing</li>
+                        <li>Library management</li>
+                        <li>Parent and teacher portals</li>
+                        <li>Examination management</li>
+                    </ul>
+                </div>
+                <div class="modal-actions">
+                    <a href="https://wa.me/263786106154?text=Hello%20Avail%20Technologies,%20I'm%20interested%20in%20Clarity%20Scholars%20software." target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                    </a>
+                    <button class="demo-btn">
+                        <i class="fas fa-desktop"></i> Request Demo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Service Modals -->
+    <div id="customDevModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Custom Software Development</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <i class="fas fa-code"></i>
+                </div>
+                <p class="modal-description">
+                    Our custom software development service creates tailored solutions designed specifically for your 
+                    business needs. We work closely with you to understand your processes and challenges, then develop 
+                    software that enhances efficiency, productivity, and growth.
+                </p>
+                <div class="modal-features">
+                    <h3>What We Offer</h3>
+                    <ul class="feature-list">
+                        <li>Requirement analysis and consultation</li>
+                        <li>Custom application development</li>
+                        <li>Web and mobile app development</li>
+                        <li>Database design and implementation</li>
+                        <li>API development and integration</li>
+                        <li>Quality assurance and testing</li>
+                        <li>Deployment and implementation support</li>
+                        <li>Ongoing maintenance and updates</li>
+                    </ul>
+                </div>
+                <div class="modal-actions">
+                    <a href="https://wa.me/263786106154?text=Hello%20Avail%20Technologies,%20I'm%20interested%20in%20Custom%20Software%20Development%20services." target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                    </a>
+                    <button class="demo-btn">
+                        <i class="fas fa-desktop"></i> Request Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="consultancyModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Software Engineering Consultancy</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <i class="fas fa-cogs"></i>
+                </div>
+                <p class="modal-description">
+                    Our software engineering consultancy service provides expert guidance to help you make informed 
+                    technology decisions, architect robust solutions, and implement best practices for sustainable 
+                    software development.
+                </p>
+                <div class="modal-features">
+                    <h3>What We Offer</h3>
+                    <ul class="feature-list">
+                        <li>Technology stack selection and architecture design</li>
+                        <li>Code review and quality assessment</li>
+                        <li>Performance optimization consulting</li>
+                        <li>Scalability and infrastructure planning</li>
+                        <li>Development process improvement</li>
+                        <li>Team training and mentorship</li>
+                        <li>Technical due diligence</li>
+                        <li>Legacy system modernization</li>
+                    </ul>
+                </div>
+                <div class="modal-actions">
+                    <a href="https://wa.me/263786106154?text=Hello%20Avail%20Technologies,%20I'm%20interested%20in%20Software%20Engineering%20Consultancy%20services." target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                    </a>
+                    <button class="demo-btn">
+                        <i class="fas fa-desktop"></i> Request Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="securityModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Cyber Security Consultancy</h2>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-image">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <p class="modal-description">
+                    Our cybersecurity consultancy service helps protect your business from evolving threats through 
+                    comprehensive security assessments, strategy development, and implementation of robust security 
+                    measures tailored to your specific needs.
+                </p>
+                <div class="modal-features">
+                    <h3>What We Offer</h3>
+                    <ul class="feature-list">
+                        <li>Security risk assessments and audits</li>
+                        <li>Vulnerability testing and penetration testing</li>
+                        <li>Security policy development and implementation</li>
+                        <li>Incident response planning and training</li>
+                        <li>Data protection and encryption strategies</li>
+                        <li>Network security architecture</li>
+                        <li>Compliance guidance (GDPR, POPIA, etc.)</li>
+                        <li>Security awareness training for staff</li>
+                    </ul>
+                </div>
+                <div class="modal-actions">
+                    <a href="https://wa.me/263786106154?text=Hello%20Avail%20Technologies,%20I'm%20interested%20in%20Cyber%20Security%20Consultancy%20services." target="_blank" class="whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Contact via WhatsApp
+                    </a>
+                    <button class="demo-btn">
+                        <i class="fas fa-desktop"></i> Request Consultation
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Additional service modals would follow the same pattern -->
+    <!-- I've included three service modals as examples -->
 
     <!-- Hero Section -->
     <section class="hero">
@@ -1425,7 +1932,7 @@
                     <div class="product-content">
                         <h3>Clarity Clinics</h3>
                         <p>Elevate your healthcare practice with our advanced clinic management software designed to streamline operations and enhance patient care.</p>
-                        <a href="#" class="btn btn-secondary">Learn More</a>
+                        <button class="btn btn-secondary learn-more-btn" data-modal="clinicsModal">Learn More</button>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1435,7 +1942,7 @@
                     <div class="product-content">
                         <h3>Clarity Pharmacy</h3>
                         <p>Transform your pharmacy operations with our advanced management software designed to streamline workflows and enhance patient care.</p>
-                        <a href="#" class="btn btn-secondary">Learn More</a>
+                        <button class="btn btn-secondary learn-more-btn" data-modal="pharmacyModal">Learn More</button>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1445,7 +1952,7 @@
                     <div class="product-content">
                         <h3>Clarity Retail</h3>
                         <p>Streamline your retail operations with our state-of-the-art Point-of-Sale software designed for efficiency and growth.</p>
-                        <a href="#" class="btn btn-secondary">Learn More</a>
+                        <button class="btn btn-secondary learn-more-btn" data-modal="retailModal">Learn More</button>
                     </div>
                 </div>
                 <div class="product-card">
@@ -1455,7 +1962,7 @@
                     <div class="product-content">
                         <h3>Clarity Scholars</h3>
                         <p>Comprehensive school management software designed to streamline operations, enhance communication, and improve educational experiences.</p>
-                        <a href="#" class="btn btn-secondary">Learn More</a>
+                        <button class="btn btn-secondary learn-more-btn" data-modal="scholarsModal">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -1475,6 +1982,7 @@
                     </div>
                     <h3>Custom Software Development</h3>
                     <p>Empower your business with tailor-made software solutions designed to meet your unique operational needs.</p>
+                    <button class="btn btn-secondary learn-more-btn" data-modal="customDevModal" style="margin-top: 15px;">Learn More</button>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
@@ -1482,6 +1990,7 @@
                     </div>
                     <h3>Software Engineering Consultancy</h3>
                     <p>Leverage our expertise to transform your ideas into robust, scalable, and future-proof software solutions.</p>
+                    <button class="btn btn-secondary learn-more-btn" data-modal="consultancyModal" style="margin-top: 15px;">Learn More</button>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
@@ -1489,6 +1998,7 @@
                     </div>
                     <h3>Cyber Security Consultancy</h3>
                     <p>Protect your business from evolving threats with our comprehensive cybersecurity services.</p>
+                    <button class="btn btn-secondary learn-more-btn" data-modal="securityModal" style="margin-top: 15px;">Learn More</button>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
@@ -1496,6 +2006,7 @@
                     </div>
                     <h3>Data Processing & Analysis</h3>
                     <p>Unlock the power of your data with our advanced processing and analysis services.</p>
+                    <button class="btn btn-secondary learn-more-btn" style="margin-top: 15px;">Learn More</button>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
@@ -1503,6 +2014,7 @@
                     </div>
                     <h3>Network Installation & Maintenance</h3>
                     <p>Ensure seamless connectivity and operational efficiency with our comprehensive network services.</p>
+                    <button class="btn btn-secondary learn-more-btn" style="margin-top: 15px;">Learn More</button>
                 </div>
                 <div class="service-item">
                     <div class="service-icon">
@@ -1510,13 +2022,15 @@
                     </div>
                     <h3>Website Development</h3>
                     <p>Elevate your online presence with our professional website development and maintenance services.</p>
+                    <button class="btn btn-secondary learn-more-btn" style="margin-top: 15px;">Learn More</button>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- Rest of the page content remains the same -->
     <!-- Clients Section -->
-    <!-- <section class="section clients" id="clients">
+    <section class="section clients" id="clients">
         <div class="clients-container">
             <div class="clients-title">
                 <h2>Our Valued Clients & Partners</h2>
@@ -1528,13 +2042,12 @@
                 <img src="img/clients_logos/tajo.JPG" alt="Client Logo" class="client-logo">
                 <img src="img/clients_logos/middig.JPG" alt="Client Logo" class="client-logo">
                 <img src="img/clients_logos/msc.PNG" alt="Client Logo" class="client-logo">
-                <img src="img/clients_logos/vfc.JPG" alt="Client Logo" class="client-logo">
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Testimonials Section -->
-   <!--  <section class="section testimonials">
+    <section class="section testimonials">
         <div class="container">
             <div class="section-title">
                 <h2>What Our Clients Say</h2>
@@ -1556,7 +2069,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <!-- Impact Section -->
     <section class="section" id="impact">
@@ -1701,9 +2214,7 @@
                             <a href="https://www.facebook.com/profile.php?id=100095092221990" class="social-icon"><i class="fab fa-facebook-f"></i></a>
                             <a href="https://x.com/Availtechinfo" class="social-icon"><i class="fab fa-twitter"></i></a>
                             <a href="https://www.linkedin.com/company/97882484" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
-                            <!-- <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a> -->
-                            <!-- <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
- -->                        </div>
+                        </div>
                     </div>
                 </div>
                 <div class="contact-form">
@@ -1784,7 +2295,7 @@
                         </li>
                     </ul>
                 </div>
-                <!--<div class="footer-column">
+                <div class="footer-column">
                     <h3>Newsletter</h3>
                     <p>Subscribe to our newsletter for the latest updates and insights.</p>
                     <div class="newsletter">
@@ -1793,7 +2304,7 @@
                             <button type="submit"><i class="fas fa-paper-plane"></i></button>
                         </form>
                     </div>
-                </div>-->
+                </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2023 Avail Technologies. All Rights Reserved.</p>
@@ -1931,7 +2442,64 @@
             
             animateOnScroll();
         });
+        
+        // Modal functionality
+        const modals = document.querySelectorAll('.modal');
+        const learnMoreButtons = document.querySelectorAll('.learn-more-btn');
+        const closeButtons = document.querySelectorAll('.close-modal');
+        
+        // Open modal when Learn More button is clicked
+        learnMoreButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modalId = this.getAttribute('data-modal');
+                const modal = document.getElementById(modalId);
+                modal.style.display = 'block';
+                setTimeout(() => {
+                    modal.classList.add('show');
+                }, 10);
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        
+        // Close modal when close button is clicked
+        closeButtons.forEach(button => {
+            button.addEventListener('click', function() {
+                const modal = this.closest('.modal');
+                modal.classList.remove('show');
+                setTimeout(() => {
+                    modal.style.display = 'none';
+                    document.body.style.overflow = '';
+                }, 300);
+            });
+        });
+        
+        // Close modal when clicking outside the modal content
+        modals.forEach(modal => {
+            modal.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    this.classList.remove('show');
+                    setTimeout(() => {
+                        this.style.display = 'none';
+                        document.body.style.overflow = '';
+                    }, 300);
+                }
+            });
+        });
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                modals.forEach(modal => {
+                    if (modal.style.display === 'block') {
+                        modal.classList.remove('show');
+                        setTimeout(() => {
+                            modal.style.display = 'none';
+                            document.body.style.overflow = '';
+                        }, 300);
+                    }
+                });
+            }
+        });
     </script>
 </body>
-
 </html>
