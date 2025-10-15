@@ -571,6 +571,59 @@
 			font-size: 1rem;
 		}
 
+		/* Clean Portfolio Section */
+		.portfolios-grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+			gap: 30px;
+		}
+
+		.portfolios-grid a {
+			text-decoration: none;
+		}
+
+		.portfolio-card {
+			background: var(--card-bg);
+			border-radius: var(--border-radius);
+			padding: 30px 25px;
+			text-align: center;
+			box-shadow: var(--shadow);
+			transition: var(--transition);
+			cursor: pointer;
+			border: 1px solid var(--gray-border);
+		}
+
+		.portfolio-card:hover {
+			transform: translateY(-10px);
+			box-shadow: var(--shadow-hover);
+		}
+
+		.portfolio-icon {
+			font-size: 3rem;
+			color: var(--secondary);
+			margin-bottom: 20px;
+			display: inline-flex;
+			width: 80px;
+			height: 80px;
+			background: rgba(59, 130, 246, 0.1);
+			border-radius: 50%;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.portfolio-card h3 {
+			margin-bottom: 15px;
+			color: var(--text-color);
+			font-size: 1.4rem;
+			font-weight: 600;
+		}
+
+		.portfolio-card p {
+			color: var(--gray);
+			margin-bottom: 20px;
+			font-size: 1rem;
+		}
+
 		/* Clean Culture Section */
 		.culture-content {
 			display: grid;
@@ -1027,6 +1080,7 @@
 				<li><a href="#about">About</a></li>
 				<li><a href="#services">Services</a></li>
 				<li><a href="#products">Products</a></li>
+				<li><a href="#portfolio">Portfolio</a></li>
 				<li><a href="#culture">Culture</a></li>
 				<li><a href="#clients">Clients</a></li>
 				<li><a href="#contact">Contact</a></li>
@@ -1242,6 +1296,72 @@
 					<p>Inventory tracking, sales management, and reporting for retail stores.</p>
 					<button class="btn">View Details</button>
 				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Portfolio Section -->
+	<section id="portfolio">
+		<div class="container">
+			<h2 class="section-title">Our Portfolio</h2>
+			<p class="section-subtitle">Ready-to-use software designed for specific industries.</p>
+			
+			<div class="portfolios-grid">
+				<a href="https://avail-technologies-pvt-ltd.github.io/project-spotlight" target="_blank">
+					<div class="portfolio-card" data-portfolio="pharmacy">
+						<div class="portfolio-icon">
+							<i class="fas fa-shield"></i>
+						</div>
+						<h3>Private Client</h3>
+						<span class="tag">Work In Progress</span>
+						<p>A florist company</p>
+					</div>
+				</a>
+				
+				<a href="https://avail-technologies-pvt-ltd.github.io/project-spotlight-1" target="_blank">
+					<div class="portfolio-card" data-portfolio="pharmacy">
+						<div class="portfolio-icon">
+							<i class="fas fa-shield"></i>
+						</div>
+						<h3>Private Client</h3>
+						<span class="tag">Work In Progress</span>
+						<p>A profile for a music Artist.</p>
+					</div>
+				</a>
+
+				<a href="https://avail-technologies-pvt-ltd.github.io/project-spotlight-2" target="_blank">
+					<div class="portfolio-card" data-portfolio="pharmacy">
+						<div class="portfolio-icon">
+							<i class="fas fa-shield"></i>
+						</div>
+						<h3>Private Client</h3>
+						<span class="tag">Work In Progress</span>
+						<p>A website for an egg farming comapany</p>
+					</div>
+				</a>
+
+				<a href="https://avail-technologies-pvt-ltd.github.io/project-spotlight-3" target="_blank">
+					<div class="portfolio-card" data-portfolio="pharmacy">
+						<div class="portfolio-icon">
+							<i class="fas fa-shield"></i>
+						</div>
+						<h3>Private Client</h3>
+						<span class="tag">Work In Progress</span>
+						<p>A web page for a capentry company.</p>
+					</div>
+				</a>
+
+				<a href="https://avail-technologies-pvt-ltd.github.io/project-spotlight-4" target="_blank">
+					<div class="portfolio-card" data-portfolio="pharmacy">
+						<div class="portfolio-icon">
+							<i class="fas fa-shield"></i>
+						</div>
+						<h3>Private Client</h3>
+						<span class="tag">Work In Progress</span>
+						<p>A web page for a building architecture.</p>
+					</div>
+				</a>
 			</div>
 		</div>
 	</section>
