@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Clarity Retail | Hardware Inventory System & POS Hardware Rentals Africa</title>
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Clarity Retail: modern inventory software for African hardware stores. Offline mode, multi-branch, fiscalisation. Plus rent POS printers, laptops, A4 printers monthly or annually. Built by Avail Technologies.">
+    <meta name="keywords" content="hardware inventory software, POS system Africa, offline inventory, fiscalisation, hardware rental Zimbabwe, rent POS printer, laptop rental, A4 printer rental, Avail Technologies">
+    <meta name="author" content="Avail Technologies">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.avail.co.zw/clarity-retail">
+    <!-- Open Graph / Social -->
+    <meta property="og:title" content="Clarity Retail: Inventory Software & Hardware Rentals">
+    <meta property="og:description" content="Offline-first inventory for hardware businesses + rent laptops, POS printers, A4 printers on flexible terms.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.avail.co.zw/clarity-retail">
+    <meta property="og:image" content="https://placehold.co/1200x630/2C9B6E/FFFFFF?text=Clarity+Retail">
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts: Space Grotesk + Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Swiper JS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', system-ui, -apple-system, sans-serif;
+            background: #FFFFFF;
+            color: #1A1F2E;
+            line-height: 1.5;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --sea-green: #2C9B6E;
+            --sea-green-light: #3FB87E;
+            --sea-green-soft: #E8F3EF;
+            --dark-gold: #5C4A1A;
+            --dark-gold-deep: #1F1A0C;
+            --gold-accent: #C9A53B;
+            --gray-light: #F8F9FC;
+            --gray-border: #E9ECF0;
+            --text-dark: #1A1F2E;
+            --text-muted: #5A6275;
+        }
+
+        .sticky-nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            background: rgba(255, 255, 255, 0.96);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--gray-border);
+            padding: 1rem 0;
+        }
+
+        .nav-container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Bauhaus 93', sans-serif;
+            font-weight: 700;
+            font-size: 1.6rem;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, var(--dark-gold-deep) 0%, var(--dark-gold) 80%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        .logo span { color: var(--sea-green); background: none; }
+
+        .nav-links { display: flex; gap: 2rem; align-items: center; flex-wrap: wrap; }
+        .nav-links a { text-decoration: none; font-size: 0.9rem; font-weight: 500; color: var(--text-dark); transition: color 0.2s; }
+        .nav-links a:hover { color: var(--sea-green); }
+        .hamburger { display: none; font-size: 1.8rem; cursor: pointer; background: none; border: none; }
+        .mobile-menu { position: fixed; top: 0; right: -100%; width: 75%; max-width: 320px; height: 100vh; background: white; z-index: 2000; padding: 2rem 1.8rem; transition: right 0.3s; display: flex; flex-direction: column; gap: 1.5rem; box-shadow: -5px 0 25px rgba(0,0,0,0.1); }
+        .mobile-menu.open { right: 0; }
+        .mobile-menu a { text-decoration: none; font-weight: 500; color: var(--text-dark); border-bottom: 1px solid var(--gray-border); padding: 0.6rem 0; }
+        .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); backdrop-filter: blur(3px); z-index: 1500; display: none; }
+        .overlay.active { display: block; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 1.8rem; }
+        .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 3rem 1rem 4rem; position: relative; }
+        .hero-badge { background: var(--sea-green-soft); color: var(--sea-green); padding: 0.3rem 1rem; border-radius: 40px; font-size: 0.75rem; font-weight: 600; display: inline-block; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: 3.2rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; line-height: 1.2; max-width: 900px; margin-bottom: 1rem; }
+        .hero h1 span { color: var(--sea-green); }
+        .hero-desc { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin-bottom: 1.8rem; }
+        .mini-features { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.8rem; margin: 1.5rem 0; }
+        .mini-feat { background: var(--gray-light); padding: 0.4rem 1.2rem; border-radius: 60px; font-size: 0.85rem; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; }
+        .btn-primary { background: var(--sea-green); border: none; padding: 0.9rem 2rem; border-radius: 50px; font-weight: 600; color: white; cursor: pointer; transition: 0.2s; }
+        .btn-primary:hover { background: var(--sea-green-light); transform: translateY(-2px); }
+        .btn-outline { background: transparent; border: 1.5px solid var(--dark-gold); padding: 0.9rem 2rem; border-radius: 50px; font-weight: 500; color: var(--dark-gold); cursor: pointer; }
+        section { padding: 4rem 0; border-bottom: 1px solid var(--gray-border); }
+        .section-title { font-size: 2rem; font-weight: 700; font-family: 'Space Grotesk', sans-serif; margin-bottom: 2rem; text-align: center; color: var(--dark-gold-deep); }
+        .section-title i { color: var(--sea-green); margin-right: 0.6rem; }
+        .features-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px,1fr)); gap: 2rem; }
+        .feature-card { background: var(--gray-light); padding: 2rem 1.5rem; border-radius: 1.5rem; transition: 0.2s; border: 1px solid transparent; }
+        .feature-card:hover { border-color: var(--sea-green-light); transform: translateY(-4px); }
+        .feature-card i { font-size: 2.2rem; color: var(--sea-green); margin-bottom: 1rem; }
+        .detailed-features { background: var(--gray-light); border-radius: 2rem; padding: 2rem; margin-top: 1rem; }
+        .features-list-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px,1fr)); gap: 1.2rem; }
+        .list-feature { display: flex; gap: 1rem; align-items: flex-start; }
+        .list-feature i { font-size: 1.3rem; color: var(--sea-green); margin-top: 0.2rem; }
+        /* Hardware rental tables */
+        .hardware-rental-section { background: linear-gradient(145deg, #FFFFFF, var(--sea-green-soft)); border-radius: 2rem; padding: 2rem; margin-top: 1.5rem; }
+        .rental-grid { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; margin-top: 1.5rem; }
+        .hardware-card { background: white; border-radius: 1.5rem; padding: 1.5rem; flex: 1; min-width: 240px; box-shadow: 0 12px 28px -8px rgba(0,0,0,0.08); border: 1px solid var(--gray-border); transition: 0.2s; }
+        .hardware-card:hover { border-color: var(--gold-accent); }
+        .hardware-card h3 { font-size: 1.5rem; margin-bottom: 1rem; display: flex; align-items: center; gap: 0.6rem; color: var(--dark-gold-deep); }
+        .hardware-card .price-row { display: flex; justify-content: space-between; padding: 0.6rem 0; border-bottom: 1px dashed var(--gray-border); font-weight: 500; }
+        .price-row span:first-child {
+        	color: var(--text-muted);
+        	display: flex;
+        	justify-content: space-between;
+        }
+        .price-row span:last-child { color: var(--sea-green); font-weight: 700; }
+        .rental-badge { background: var(--sea-green-soft); color: var(--sea-green); border-radius: 30px; padding: 0.2rem 0.8rem; font-size: 0.7rem; font-weight: 600; display: inline-block; margin-top: 0.8rem; }
+        .btn-rent { margin-top: 1.2rem; width: 100%; background: var(--dark-gold); color: white; border: none; padding: 0.6rem; border-radius: 40px; font-weight: 600; cursor: pointer; transition: 0.2s; }
+        .btn-rent:hover { background: var(--gold-accent); }
+        .about-duo { display: flex; flex-wrap: wrap; gap: 2rem; margin: 2rem 0 0; }
+        .about-box { flex: 1; background: var(--gray-light); padding: 2rem; border-radius: 1.5rem; }
+        .pricing-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; }
+        .pricing-card { flex: 1; min-width: 240px; background: var(--gray-light); border-radius: 1.5rem; padding: 2rem; text-align: center; border: 1px solid var(--gray-border); }
+        .price { font-size: 2.4rem; font-weight: 800; margin: 1rem 0; color: var(--dark-gold-deep); }
+        .contact-grid { display: flex; flex-wrap: wrap; gap: 2rem; background: var(--gray-light); border-radius: 1.5rem; padding: 2rem; }
+        .contact-info { flex: 1; }
+        .contact-demo { flex: 1; background: white; padding: 1.5rem; border-radius: 1.2rem; }
+        footer { padding: 2rem 0; text-align: center; color: var(--text-muted); font-size: 0.8rem; border-top: 1px solid var(--gray-border); }
+        @media (max-width: 850px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .hero h1 { font-size: 2.2rem; }
+            section { padding: 2.5rem 0; }
+        }
+        button { font-family: inherit; }
+        a { text-decoration: none; }
+    </style>
+</head>
+<body>
+
+<nav class="sticky-nav">
+    <div class="nav-container">
+        <div class="logo">clarity<span>retail</span></div>
+        <div class="nav-links">
+            <a href="#hero">Home</a>
+            <a href="#features">Features</a>
+            <a href="#all-features">All Features</a>
+            <a href="#hardware-rental">Hardware Rentals</a>
+            <a href="#screenshots">Gallery</a>
+            <a href="#pricing">Pricing</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <button class="hamburger" id="hamburgerBtn"><i class="fas fa-bars"></i></button>
+    </div>
+</nav>
+<div class="mobile-menu" id="mobileMenu">
+    <button class="close-menu" id="closeMenuBtn" style="align-self: flex-end; font-size:1.8rem; background:none; border:none;"><i class="fas fa-times"></i></button>
+    <a href="#hero">Home</a>
+    <a href="#features">Features</a>
+    <a href="#all-features">All Features</a>
+    <a href="#hardware-rental">Hardware Rentals</a>
+    <a href="#screenshots">Gallery</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact">Contact</a>
+</div>
+<div class="overlay" id="overlay"></div>
+
+<main>
+    <div class="container">
+        <!-- Hero -->
+        <section id="hero" style="border-bottom:none; padding-bottom:1rem;">
+            <div class="hero">
+                <div class="hero-badge"><i class="fas fa-map-marker-alt"></i> Built for Africa · Online & Offline + Hardware on Rent</div>
+                <h1>Hardware inventory, <span>simplified.</span><br>Rent the gear, run smarter.</h1>
+                <p class="hero-desc">Clarity Retail brings modern inventory control to African hardware businesses - multi‑branch, fiscalisation ready, clear reports. Need POS hardware? Rent laptops, POS printers & A4 printers monthly or annually.</p>
+                <!-- <div class="mini-features">
+                    <div class="mini-feat"><i class="fas fa-cloud-upload-alt"></i> Offline-first</div>
+                    <div class="mini-feat"><i class="fas fa-laptop"></i> Hardware rental</div>
+                    <div class="mini-feat"><i class="fas fa-receipt"></i> Fiscalisation</div>
+                    <div class="mini-feat"><i class="fas fa-print"></i> POS printers</div>
+                </div> -->
+                <div class="hero-buttons">
+                    <button style="margin-bottom: 20px" class="btn-primary">
+                    	<a href="https://wa.me/263786106154?text=Hi%20Avail%20Technologies%2C%20I%20would%20like%20a%20demo%20for%20Clarity%20Retail%20software.%3F" style="color: white;"> Book a demo - $5 </a>
+                    </button>
+                    <button class="btn-outline" onclick="document.getElementById('hardware-rental').scrollIntoView({behavior:'smooth'})"><i class="fas fa-cube"></i> Rent hardware</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Core features grid -->
+        <section id="features">
+            <div class="section-title"><i class="fas fa-cogs"></i> Core capabilities</div>
+            <div class="features-grid">
+                <div class="feature-card"><i class="fas fa-sync-alt"></i><h3>Online + Offline</h3><p>Seamless sync across branches. Never lose a sale during internet outages.</p></div>
+                <div class="feature-card"><i class="fas fa-receipt"></i><h3>Fiscalisation (optional)</h3><p>Flexible tax compliance - activate only when local regulations require.</p></div>
+                <div class="feature-card"><i class="fas fa-network-wired"></i><h3>Multi-branch control</h3><p>Central dashboard, per‑branch stock & consolidated reports.</p></div>
+                <div class="feature-card"><i class="fas fa-chart-pie"></i><h3>Crystal clear reports</h3><p>Stock aging, sales trends, profit analytics - modern & intuitive.</p></div>
+                <div class="feature-card"><i class="fas fa-money-bill-wave"></i><h3>Multiple payment methods</h3><p>Cash, mobile money, cards, credit - track all at POS seamlessly.</p></div>
+                <div class="feature-card"><i class="fas fa-mobile-alt"></i><h3>Modern & responsive</h3><p>Glassy UI, works on tablets, phones, desktops - anywhere you manage.</p></div>
+            </div>
+        </section>
+
+        <!-- All detailed features -->
+        <section id="all-features">
+            <div class="section-title"><i class="fas fa-list-ul"></i> Everything you need</div>
+            <div class="detailed-features">
+                <div class="features-list-grid">
+                    <div class="list-feature"><i class="fas fa-database"></i><div><h4>Offline-first architecture</h4><p>Local database stores transactions, syncs when online. Perfect for unreliable networks.</p></div></div>
+                    <div class="list-feature"><i class="fas fa-chart-simple"></i><div><h4>Advanced inventory insights</h4><p>Low stock alerts, bestsellers, turnover rates & profit margin analysis.</p></div></div>
+                    <div class="list-feature"><i class="fas fa-building"></i><div><h4>Multi-branch hierarchy</h4><p>Unified item master, branch-specific pricing, and stock transfers.</p></div></div>
+                    <div class="list-feature"><i class="fas fa-file-invoice"></i><div><h4>Fiscalisation toggle</h4><p>Optional fiscal receipt printing and tax reporting for African markets.</p></div></div>
+                    <div class="list-feature"><i class="fas fa-print"></i><div><h4>Smart receipts & invoices</h4><p>Customizable invoice templates, thermal receipt support, email invoices.</p></div></div>
+                    <div class="list-feature"><i class="fas fa-qrcode"></i><div><h4>Barcode scanning</h4><p>Fast POS with barcode scanner integration for hardware SKUs.</p></div></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- NEW: HARDWARE RENTAL SECTION (Laptop, POS Printer, A4 Printer) -->
+        <section id="hardware-rental">
+            <div class="section-title"><i class="fas fa-laptop-code"></i> Hardware rental - for your business</div>
+            <div class="hardware-rental-section">
+                <p style="text-align: center; margin-bottom: 1rem;"><i class="fas fa-hand-holding-usd"></i> Don't have the hardware? Rent laptops, POS printers, or A4 printers on flexible terms. Monthly & annual plans with affordable rates. Each item priced separately.</p>
+                <div class="rental-grid">
+                    <!-- Laptop Card -->
+                    <div class="hardware-card">
+                        <h3><i class="fas fa-laptop"></i> Business Laptop</h3>
+                        <div class="price-row"><span>Monthly rental</span><span>$25/m</span></div>
+                        <div class="price-row"><span>Annual rental</span><span>$250/y</span></div>
+                        <div class="price-row"><span>Plus</span><span>Free maintanace</span></div>
+                        <div class="rental-badge"><i class="fas fa-check-circle"></i> Core i5, 8GB RAM, 256GB SSD, Win11</div>
+                        <div class="rental-badge"><i class="fas fa-check-circle"></i> Fully configured for Clarity Retail</div>
+                    </div>
+                    <!-- POS Printer Card (thermal receipt) -->
+                    <div class="hardware-card">
+                        <h3><i class="fas fa-receipt"></i> POS Printer</h3>
+                        <div class="price-row"><span>Monthly rental</span><span>$8/m</span></div>
+                        <div class="price-row"><span>Annual rental</span><span>$70/y</span></div>
+                        <div class="rental-badge"><i class="fas fa-print"></i>USB + Ethernet, 80mm, auto-cutter</div>
+                    </div>
+                    <!-- A4 Printer for quotations/invoices -->
+                    <div class="hardware-card">
+                        <h3><i class="fas fa-print"></i>A4 Printer</h3>
+                        <div class="price-row"><span>Monthly rental</span><span>$5/m</span></div>
+                        <div class="price-row"><span>Annual rental</span><span>$40/y</span></div>
+                        <div class="rental-badge"><i class="fas fa-file-alt"></i> For printing quotations, invoices, reports</div>
+                        <div class="rental-badge"><i class="fas fa-file-alt"></i> Laser / inkjet options</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 1.8rem; font-size:0.85rem; background: white; padding:0.6rem; border-radius: 40px;"><i class="fas fa-info-circle"></i> All rentals include delivery within Zimbabwe, basic setup & support. Annual plans get priority service. Bundle software + hardware for discounts.</p>
+            </div>
+        </section>
+
+        <!-- Screenshot Carousel -->
+        <section id="screenshots">
+            <div class="section-title"><i class="fas fa-images"></i> See Clarity Retail in action</div>
+            <div class="screenshots-section" style="background: var(--gray-light); border-radius: 2rem; padding: 1rem 0;">
+                <div class="swiper screenshot-swiper" style="padding: 1rem 0 2rem;">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="https://placehold.co/800x500/2C9B6E/FFFFFF?text=Dashboard+Overview" alt="Clarity Retail Dashboard"><div class="slide-caption">Executive Dashboard - real-time KPIs</div></div>
+                        <div class="swiper-slide"><img src="https://placehold.co/800x500/5C4A1A/FFFFFF?text=Inventory+Management" alt="Inventory screen"><div class="slide-caption">Stock & inventory control</div></div>
+                        <div class="swiper-slide"><img src="https://placehold.co/800x500/3FB87E/FFFFFF?text=Offline+Mode" alt="Offline mode"><div class="slide-caption">Offline-first POS interface</div></div>
+                        <div class="swiper-slide"><img src="https://placehold.co/800x500/C9A53B/FFFFFF?text=Multi-Branch+Reports" alt="Branch reports"><div class="slide-caption">Multi-branch sales analytics</div></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Software + Avail -->
+        <div style="display: flex; flex-wrap: wrap; gap: 2rem; margin: 1rem 0 0;" id="about-software">
+            <div class="about-box">
+                <h3><i class="fas fa-cube"></i> About Clarity Retail</h3>
+                <p>Clarity Retail is a modern hardware inventory management system built specifically for African retail environments. It works online and offline, supports optional fiscalisation, and delivers real-time multi‑branch visibility. From stock takes to sales analytics, everything is designed to be minimalistic yet powerful - with clear reports and support for mobile money, cash, and cards.</p>
+                <p style="margin-top: 1rem;"><i class="fas fa-check-circle" style="color:#2C9B6E;"></i> Offline-first architecture ensures business continuity even without internet.</p>
+            </div>
+            <div class="about-box" id="about-avail">
+                <h3><i class="fas fa-building"></i> About Avail Technologies</h3>
+                <p><strong>Avail Technologies Private Ltd</strong> (<a href="https://www.avail.co.zw" style="color: var(--sea-green);">avail.co.zw</a>) is a Zimbabwe-based software company dedicated to delivering smart business tools for the African market. With deep expertise in retail and logistics, Avail builds reliable, future-ready solutions that empower hardware stores, wholesalers, and multi-branch operations. We also offer hardware rental options to ensure every business is equipped for success.</p>
+            </div>
+        </div>
+
+        <!-- Pricing Section (Software) -->
+        <section id="pricing">
+            <div class="section-title"><i class="fas fa-tags"></i> Software plans · per branch</div>
+            <div class="pricing-grid">
+                <div class="pricing-card"><h3><i class="fas fa-calendar-alt"></i> Monthly</h3>
+                	<div class="price">$10 <small>/month/branch</small></div>
+                	<div>Full features + offline mode</div>
+                	<div>Multi-payment support</div>
+                	<button class="btn-price" style="margin-top:1.2rem; width:100%; background:white; border:1px solid var(--dark-gold); padding:0.7rem; border-radius:40px; font-weight:600;">
+                		<a href="https://wa.me/263786106154?text=Hi%20Avail...%3F">
+              				Choose monthly
+              			</a>
+                	</button>
+                </div>
+                <div class="pricing-card"><h3><i class="fas fa-calendar-check"></i> Annual</h3>
+                	<div class="price">$100 <small>/year/branch</small></div>
+                	<div>Save 16% + priority support</div>
+                	<div>Annual analytics dashboard</div>
+                	<button class="btn-price" style="margin-top:1.2rem; width:100%; background:white; border:1px solid var(--dark-gold); padding:0.7rem; border-radius:40px;">
+                		<a href="https://wa.me/263786106154?text=Hi%20Avail...%3F">
+                			Go annual
+                		</a>
+                	</button>
+                </div>
+                <div class="pricing-card"><h3><i class="fas fa-flask"></i> Demo access</h3>
+                	<div class="price">$5 <small>one-time</small></div>
+                	<div>Full sandbox, 7 days trial</div>
+                	<div>Test offline mode & reports</div>
+                	<button class="btn-price" style="margin-top:1.2rem; width:100%; background:white; border:1px solid var(--dark-gold); padding:0.7rem; border-radius:40px;">
+                		<a href="https://wa.me/263786106154?text=Hi%20Avail...%3F">
+                			Book a demo
+                		</a>
+                	</button>
+                	<div class="install-note" style="margin-top:0.8rem;"><i class="fas fa-tools"></i> Installation: $30 / branch</div>
+                </div>
+            </div>
+            <p style="text-align: center; margin-top: 2rem; font-size: 0.85rem;"><i class="fas fa-info-circle"></i> One-time installation fee: USD 30 per branch (setup, training, data migration). All plans include free updates. Hardware rental separate - ask about bundle discounts.</p>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact">
+            <div class="section-title"><i class="fas fa-address-card"></i> Get in touch</div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> <a href="mailto:info@avail.co.zw"> info@avail.co.zw</a></p>
+                    <p><i class="fas fa-phone-alt"></i> <strong>Phone:</strong> <a href="tel:+263784851863"> +263 78 485 1863</a></p>
+                    <p><i class="fas fa-globe"></i> <strong>Web:</strong> <a href="https://www.avail.co.zw"> avail.co.zw</a></p>
+                    <p><i class="fas fa-map-pin"></i> <strong>Address:</strong> Marondera, Zimbabwe (serving all Africa)</p>
+                    <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> <a href="https://wa.me/263786106154"> +263 78 610 6154</a></p>
+                    <p><i class="fas fa-cube"></i> <strong>Hardware rentals:</strong> Laptops, POS printers, A4 printers - monthly/annual.</p>
+                </div>
+                <div class="contact-demo">
+                    <h4 style="margin-bottom: 0.8rem;"><i class="fas fa-gem"></i> Start with Clarity Retail</h4>
+                    <p>Request a $5 demo, get installation support, or rent hardware to equip your store. Flexible monthly/annual billing, multi-branch discounts available.</p>
+                    <button class="btn-primary" style="margin-top: 1rem; width: 100%;">
+                    	<a href="https://wa.me/263786106154" style="color: white;">
+                    		<i class="fas fa-paper-plane"></i> Contact sales
+                    	</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+    <footer>
+        <div class="container">
+            <p><i class="fas fa-copyright"></i> 2023 Avail Technologies Private Ltd - Clarity Retail. Built for African hardware shops.</p>
+            <p style="margin-top: 0.5rem;"><i class="fas fa-cloud-sun"></i> Offline · Fiscalisation ready · Elegant inventory · Hardware rentals available</p>
+            <p style="margin-top: 0.3rem; font-size:0.7rem;"><a href="https://www.avail.co.zw">avail.co.zw</a> | clarity retail | POS hardware rental</p>
+        </div>
+    </footer>
+</main>
+
+<script>
+    const hamburger = document.getElementById('hamburgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const overlay = document.getElementById('overlay');
+    const closeMenuBtn = document.getElementById('closeMenuBtn');
+    function openMenu() { mobileMenu.classList.add('open'); overlay.classList.add('active'); document.body.style.overflow = 'hidden'; }
+    function closeMenu() { mobileMenu.classList.remove('open'); overlay.classList.remove('active'); document.body.style.overflow = ''; }
+    hamburger.addEventListener('click', openMenu);
+    closeMenuBtn.addEventListener('click', closeMenu);
+    overlay.addEventListener('click', closeMenu);
+    document.querySelectorAll('.mobile-menu a').forEach(link => { link.addEventListener('click', function(e) { closeMenu(); const targetId = this.getAttribute('href').slice(1); const target = document.getElementById(targetId); if(target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); } }); });
+    document.querySelectorAll('.nav-links a').forEach(anchor => { anchor.addEventListener('click', function(e) { const targetId = this.getAttribute('href').slice(1); const target = document.getElementById(targetId); if(target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); } }); });
+    new Swiper('.screenshot-swiper', { loop: true, slidesPerView: 1, spaceBetween: 24, pagination: { el: '.swiper-pagination', clickable: true }, navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }, breakpoints: { 768: { slidesPerView: 2 }, 1024: { slidesPerView: 3 } } });
+</script>
+</body>
+</html>

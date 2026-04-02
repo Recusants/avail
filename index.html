@@ -58,19 +58,19 @@
     <style>
         /* Base Styles & Variables */
         ::-webkit-scrollbar
-	{
-		width:2px;
-		height:8px;
-		border-radius:50%;
-	}
+    {
+        width:2px;
+        height:8px;
+        border-radius:50%;
+    }
 
 ::-webkit-scrollbar-thumb {
-		background-color:black;
-	}
+        background-color:black;
+    }
 
 ::-webkit-scrollbar-thumb:hover {
-		background-color:grey;
-	}
+        background-color:grey;
+    }
 
         :root {
             --almost-white: #f8fafc;
@@ -1588,7 +1588,7 @@
                     </div>
                 </div>
                 <!-- Navigation Indicator -->
-                <!--<div class="nav-indicator"></div>-->
+               <!--  <div class="nav-indicator"></div> -->
             </nav>
         </div>
     </header>
@@ -1603,11 +1603,11 @@
                 <div class="hero-text">
                     <h2 class="fade-in">
                         <!-- Bespoke <span class="accent">Software Solutions</span> For A Classy Experience -->
-                        <!--Branding & Disign <br>
+                        <!-- Branding & Disign <br>
                         Social Media & Websites <br>
                         Custom Business Software <br>
-                        Cyber Security & IT Consultancy-->
-						Your partner in digital transformation.
+                        Cyber Security & IT Consultancy -->
+                        Your partner in digital transformation.
                     </h2>
                     <p class="fade-in">We create premium software solutions that simplify complex processes, delivering significant time savings and cost reduction for discerning businesses.</p>
                     <div class="hero-btns">
@@ -1669,7 +1669,9 @@
                     
                     <h3>Our Mission</h3>
                     <p>We deliver high-quality, custom software solutions that solve complex business challenges and drive growth for our clients.</p>
-                    
+                </div>
+
+                <div class="about-text">
                     <div class="values-grid">
                         <div class="value-item fade-in">
                             <i class="fas fa-lightbulb"></i>
@@ -1689,13 +1691,13 @@
                     </div>
                 </div>
                 
-                <div class="team-section slide-in-right">
+                <!-- <div class="team-section slide-in-right">
                     <div class="team-icon">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3>Our Expert Team</h3>
                     <p>We bring together skilled developers, designers, and business analysts who collaborate to deliver exceptional software solutions tailored to your unique needs.</p>
-                </div>
+                </div> -->
             </div>
         </div>
     </section>
@@ -1849,13 +1851,15 @@
                 </div>
                 
                 <div class="product-card fade-in" data-modal="retail">
-                    <div class="product-icon">
-                        <i class="fas fa-cash-register"></i>
-                    </div>
-                    <h3>Clarity Retail</h3>
-                    <span class="tag">Retail Inventory Management Software</span>
-                    <p>Inventory tracking, sales management, and reporting for retail stores.</p>
-                    <a class="btn btn-outline">Learn More</a>
+                    <a href="clarity_retail.html" style="text-decoration: none;"> 
+                        <div class="product-icon">
+                            <i class="fas fa-cash-register"></i>
+                        </div>
+                        <h3>Clarity Retail</h3>
+                        <span class="tag">Retail Inventory Management Software</span>
+                        <p>Inventory tracking, sales management, and reporting for retail stores.</p>
+                        <a href="clarity_retail.html" style="text-decoration: none;" class="btn btn-outline">Learn More</a>
+                    </a>
                 </div>
             </div>
         </div>
@@ -1868,6 +1872,9 @@
             <p class="section-intro">Trusted by industry leaders and innovative startups across multiple sectors.</p>
             
             <div class="logos-grid">
+                <div class="logo-item fade-in">
+                    <img src="https://i.ibb.co/Q7Hrnv7B/ngodigest.png" alt="NGO Digest" loading="lazy">
+                </div>
                 <div class="logo-item fade-in">
                     <img src="https://i.ibb.co/Q7Hrnv7B/21-void.png" alt="21-void" loading="lazy">
                 </div>
@@ -1929,6 +1936,16 @@
             <p class="section-intro">A showcase of our recent work and client success stories</p>
             
             <div class="projects-grid">
+                <a href="https://ngodigest.co.zw" target="_blank" class="project-card fade-in">
+                    <div class="project-image">
+                        <span>News Company</span>
+                    </div>
+                    <div class="project-content">
+                        <h3>NGO Digest</h3>
+                        <p>A newsletter website for an NGO News covarage company</p>
+                    </div>
+                </a>
+
                 <a href="https://avail-technologies-pvt-ltd.github.io/project-spotlight" target="_blank" class="project-card fade-in">
                     <div class="project-image">
                         <span>Florist Company</span>
@@ -2354,7 +2371,7 @@
         });
 
         // Navigation Indicator
-        //const navIndicator = document.querySelector('.nav-indicator');
+        /*const navIndicator = document.querySelector('.nav-indicator');*/
         const navLinks = document.querySelectorAll('.nav-link');
         
         // Function to update navigation indicator
@@ -2382,8 +2399,8 @@
                     const indicatorWidth = activeLink.offsetWidth;
                     const indicatorLeft = activeLink.offsetLeft;
                     
-                    //navIndicator.style.width = `${indicatorWidth}px`;
-                    //navIndicator.style.left = `${indicatorLeft}px`;
+                    /*navIndicator.style.width = `${indicatorWidth}px`;
+                    navIndicator.style.left = `${indicatorLeft}px`;*/
                 }
             });
             
@@ -2391,8 +2408,8 @@
             if (!currentSection && window.scrollY < 100) {
                 navLinks[0].classList.add('active');
                 const homeLink = navLinks[0].parentElement;
-                navIndicator.style.width = `${homeLink.offsetWidth}px`;
-                navIndicator.style.left = `${homeLink.offsetLeft}px`;
+               /* navIndicator.style.width = `${homeLink.offsetWidth}px`;
+                navIndicator.style.left = `${homeLink.offsetLeft}px`;*/
             }
         }
         
